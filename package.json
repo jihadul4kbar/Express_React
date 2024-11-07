@@ -1,0 +1,11 @@
+{
+  "name": "express_react",
+  "version": "1.0.0",
+  "description": "Membuat aplikasi backend dengan express js dan frontend dengan react js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jihadul akbar jihadul4kbar@gmail.com",
+  "license": "ISC"
+}
