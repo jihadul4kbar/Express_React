@@ -115,7 +115,8 @@ Qustion and Answer
 
 ---
 
-# Terima Kasih
+:fa-hands:
+### Terima Kasih
 
 ---
 
