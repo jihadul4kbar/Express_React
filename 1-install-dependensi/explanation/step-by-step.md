@@ -150,7 +150,7 @@ api-backend
 ├── routes
 │   └── userRoutes.js
 └── controllers
-    └── userController.js
+│   └── userController.js
 ├── utils
 │   └── db.js
 ```
@@ -221,7 +221,11 @@ exports.getUsers = (req, res) => {
         res.json(results);
     });
 };
+```
 
+--
+
+```js
 // Mendapatkan user berdasarkan ID
 exports.getUserById = (req, res) => {
     const { id } = req.params;
@@ -230,7 +234,11 @@ exports.getUserById = (req, res) => {
         res.json(results[0]);
     });
 };
+```
 
+--
+
+```js
 // Menambahkan user baru
 exports.createUser = (req, res) => {
     const { name, email, password, is_active, level, expire_time } = req.body;
@@ -243,7 +251,12 @@ exports.createUser = (req, res) => {
         }
     );
 };
+```
 
+--
+
+
+```js
 // Memperbarui data user
 exports.updateUser = (req, res) => {
     const { id } = req.params;
@@ -257,7 +270,11 @@ exports.updateUser = (req, res) => {
         }
     );
 };
+```
 
+--
+
+```js
 // Menghapus user
 exports.deleteUser = (req, res) => {
     const { id } = req.params;
@@ -283,7 +300,6 @@ const db = mysql.createConnection({
     database: process.env.DB_NAME,
     connectTimeout: 10000,
 });
-
 db.connect((err) => {
     if (err) {
         console.error("Database connection failed:", err);
@@ -291,7 +307,6 @@ db.connect((err) => {
     }
     console.log("Connected to database");
 });
-
 module.exports = db;
 
 ```
