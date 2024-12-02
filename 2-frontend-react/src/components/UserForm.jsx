@@ -45,6 +45,7 @@ const UserForm = ({ currentUser, onSuccess }) => {
    };
 
    return (
+    <div className="conatiner">
        <form onSubmit={handleSubmit}>
            <h2>{form.id ? "Edit User" : "Add User"}</h2>
            <div>
@@ -106,6 +107,7 @@ const UserForm = ({ currentUser, onSuccess }) => {
            </div>
            <button type="submit">{form.id ? "Update" : "Create"}</button>
        </form>
+       </div>
    );
 };
 

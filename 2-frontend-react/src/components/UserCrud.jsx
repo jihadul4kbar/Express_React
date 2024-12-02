@@ -14,9 +14,9 @@ const UserCrud = () => {
    };
 
    return (
-       <div>
+       <div className="container">
            <h1>User Management</h1>
-           <UserForm currentUser={currentUser} onSuccess={handleSuccess} />
+           {/* <UserForm currentUser={currentUser} onSuccess={handleSuccess} /> */}
            <UserList onEdit={handleEdit} />
        </div>
    );

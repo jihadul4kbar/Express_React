@@ -27,7 +27,7 @@ const UserList = ({ onEdit }) => {
    }, []);
 
    return (
-       <div>
+       <div className="container">
            <h2>User List</h2>
            <table border="1" cellPadding="10">
                <thead>
