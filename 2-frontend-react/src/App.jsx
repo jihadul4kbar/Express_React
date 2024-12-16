@@ -1,14 +1,14 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import DataUser from "./components/DataUser";
+import Routes from '../src/routes/index'
+import MenuNavBar from "./components/Layout/MenuNavBar";
+import Footer from "./components/Layout/Footer";
 
-const App = () => {
+export default function App() {
     return (
-        <div className="App">
-            <NavBar />
-            <DataUser />
-        </div>
-    );
-};
-
-export default App;
+            <>
+                <MenuNavBar />
+                <Routes />
+                <Footer />
+            </>
+        );
+    }

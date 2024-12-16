@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { getUsers } from "../services/api";
-
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
+import { getUsers, deleteUser  } from "../../services/api";
 
 const DataUser = ({ }) => {
     const [users, setUsers] = useState([]);
- 
+
     const fetchUsers = async () => {
         try {
             const { data } = await getUsers();
@@ -13,15 +15,29 @@ const DataUser = ({ }) => {
         } catch (error) {
             console.error("Error fetching users:", error);
         }
-    };
- 
+    }; 
+
+    const handleDelete = async (id) => {
+           try {
+               await deleteUser(id);
+               fetchUsers(); // Refresh data
+           } catch (error) {
+               console.error("Error deleting user:", error);
+           }
+       };
     useEffect(() => {
         fetchUsers();
     }, []);
     return (
+        <>
         <div className="container">
-            <h2>Data User</h2>
-            <table border="1" cellPadding="10">
+        <Card >
+          <Card.Header>Data User</Card.Header>
+          <Card.Body>
+            <Card.Title>Data User </Card.Title>
+            <Button href="/user/create" variant="warning">Tambah User</Button>
+            <Card.Text>
+            <Table striped bordered hover>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -37,16 +53,18 @@ const DataUser = ({ }) => {
                             <td>{user.email}</td>
                             <td>{user.level}</td>
                             <td>
-                                <button onClick={() => onEdit(user)}>Edit</button>
-                                <button onClick={() => handleDelete(user.id)}>
-                                    Delete
-                                </button>
+                                <Button onClick={() => onEdit(user)} variant="info">Edit</Button>
+                                <Button onClick={() => handleDelete(user.id)} variant="danger">Delete</Button>
                             </td>
                         </tr>
                     ))}
                 </tbody>
-            </table>
-        </div>
+                </Table>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+        </>
     );
  };
  

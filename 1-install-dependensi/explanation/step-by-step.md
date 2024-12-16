@@ -20,7 +20,7 @@ by [Jihadul Akbar](https://github.com/jihadul4kbar)
 
 ## Buat database
 ```
-CREATE DATABASE fjs-backend;
+CREATE DATABASE fjsbackend;
 ```
 
 --
@@ -313,13 +313,12 @@ module.exports = db;
 
 ---
 
-## [Postman](https://www.postman.com)
-[Download Postman](https://www.postman.com/downloads/)
+## [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
 
 
 --
 
-> Postman adalah platform API untuk membangun dan menggunakan API. Postman menyederhanakan setiap langkah siklus hidup API dan merampingkan kolaborasi sehingga Anda dapat membuat API yang lebih baik—lebih cepat.
+> Thunder Client adalah platform API untuk membangun dan menggunakan API. Thunder Client menyederhanakan setiap langkah siklus hidup API dan merampingkan kolaborasi sehingga Anda dapat membuat API yang lebih baik—lebih cepat.
 
 --
 
@@ -331,10 +330,10 @@ endpoint : http://localhost:3000/api/users
 
 #### GET: Mendapatkan Daftar Pengguna
 
-1.	Buka Postman dan pilih metode GET.
+1.	Buka Thunder Client dan pilih metode GET.
 2.	Masukkan URL endpoint API Anda, misalnya: http://localhost:3000/api/users.
 3.	Klik tombol Send untuk mengirim permintaan.
-4.	Postman akan menampilkan respons yang dikirim server, seperti daftar pengguna dalam format JSON.
+4.	Thunder Client akan menampilkan respons yang dikirim server, seperti daftar pengguna dalam format JSON.
 
 
 --
@@ -381,7 +380,8 @@ endpoint : http://localhost:3000/api/users
 2.	Masukkan URL endpoint untuk memperbarui data pengguna berdasarkan ID, misalnya: http://localhost:3000/api/users/1.
 3.	Pilih Body -> raw -> JSON.
 4.	Masukkan data yang ingin diperbarui, misalnya:
-``` {
+``` 
+{
     "name": "Jane Doe",
     "email": "janedoe@example.com",
     "password": "newpassword",
