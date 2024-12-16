@@ -4,7 +4,7 @@ transition: "slide"
 highlightTheme: "monokai"
 logoImg: "img/logo.png"
 slideNumber: false
-title: "Install React"
+title: "Install React Boostrap dan Route"
 
 ---
 
